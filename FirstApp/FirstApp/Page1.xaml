@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirstApp.Page1">
+    <ContentPage.Content>
+        <StackLayout Margin=" 20" Padding=" 10">
+            <Label Text="Ülkeler"
+                  TextColor="Black"
+                   FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <ListView x:Name="listView" ItemsSource="{Binding .}" 
+                      
+
+                      />
+
+            <Entry x:Name="_entry" 
+                   Placeholder="Notunuzu Girin"
+                   
+                   />
+            <Label  Text=" Not İçin Saat Seçin "/>
+            
+
+            <TimePicker 
+                x:Name="_timePicker" 
+                Time="11:00:00"
+                Format="T"
+                PropertyChanged="TimePickerPropertyChanged" />
+
+            <Label Text=" Hatırlatıcıyı etkinleştir" />
+            <Switch x:Name="_switch"  
+                    HorizontalOptions="EndAndExpand"
+                    Toggled="OnSwitchToggled"/>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
